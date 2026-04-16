@@ -13,11 +13,12 @@ public class Hospital {
             System.out.println("---------------- Main Page ---------------");
             System.out.println("- (A) CHECK ALL PAITENT -");
             System.out.println("- (B) ADD NEW PAITENT DATA -"); //Check bill after then
-            System.out.println("- (C) CHECK PAITENT BY ID AND BILL -"); //Check bill after then
+            System.out.println("- (C) CHECK PAITENT BY ID -"); //Check bill after then
             System.out.println("- (D) CHECK PAITENT DISEASE -");
             System.out.println("- (E) CHECK PAITENT FROM BUILDING -");
             System.out.println("- (F) CHECK PAITENT TYPE -");
-            System.out.println("- (G)  -");
+            System.out.println("- (G) ADD BILL BY ID -");
+            System.out.println("- (H) CHECK BILL BY ID -");
 
             System.out.println();
             System.out.print("Type : ");
@@ -47,6 +48,12 @@ public class Hospital {
                     system.displayPatientByType();
                     break;
                 case "G":
+                    System.out.print("Please Type Patient Id: ");
+                    system.addBillPatient();
+                    break;
+                case "H":
+                    System.out.print("Please Type Patient Id: ");
+                    system.checkBill();
                     break;
                 default:
                     break;

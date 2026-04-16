@@ -11,7 +11,7 @@ public class FileManager {
     public void writeData(Patient patient) {
         try {
 
-            FileWriter filewrite = new FileWriter("patientData.txt", true);
+            FileWriter filewrite = new FileWriter("txt/patientData.txt", true);
             BufferedWriter bufwrite = new BufferedWriter(filewrite);
 
             // get object from Patient class
@@ -78,7 +78,7 @@ public class FileManager {
     public void readFromBuilding(String targetBuilding) {
         try {
 
-            FileReader fileread = new FileReader("patientData.txt");
+            FileReader fileread = new FileReader("txt/patientData.txt");
             BufferedReader bufread = new BufferedReader(fileread);
 
             String line = bufread.readLine();
@@ -114,7 +114,7 @@ public class FileManager {
 
     public void readDataFromDisease(String di) {
         try {
-            FileReader fileread = new FileReader("patientData.txt");
+            FileReader fileread = new FileReader("txt/patientData.txt");
             BufferedReader bufread = new BufferedReader(fileread);
 
             String line = bufread.readLine();
@@ -152,7 +152,7 @@ public class FileManager {
 
     public void readDataFromType(String T) {
         try {
-            FileReader fileread = new FileReader("patientData.txt");
+            FileReader fileread = new FileReader("txt/patientData.txt");
             BufferedReader bufread = new BufferedReader(fileread);
 
             String line = bufread.readLine();
@@ -186,9 +186,9 @@ public class FileManager {
         }
     }
 
-    public void searchId (int seachId) {
+    public Patient searchId (int seachId) {
         try {
-            FileReader fileread = new FileReader("patientData.txt");
+            FileReader fileread = new FileReader("txt/patientData.txt");
             BufferedReader bufread = new BufferedReader(fileread);
 
             String line = bufread.readLine();
@@ -205,18 +205,66 @@ public class FileManager {
                 String disease = part[7];
                 String type = part[8];
                 int room = Integer.parseInt(part[9]);
-                String building = part[11];
-                int admit = Integer.parseInt(part[10]);
+                String building = part[10];
+                int admit = Integer.parseInt(part[11]);
                 String appdate = part[12];
 
                 if (id == (seachId)) {
-                   System.out.printf("%-8d %-20s %-7d %-7s %-7s %-15s %-15s %-15s %-5s %-5d %-7s %-10d %-15s\n", 
-                id, name, age, blood, gender, birthDate, tel, disease, type, room, building, admit, appdate);
+                    System.out.printf("%-8d %-20s %-7d %-7s %-7s %-15s %-15s %-15s %-5s %-5d %-7s %-10d %-15s\n", 
+                    id, name, age, blood, gender, birthDate, tel, disease, type, room, building, admit, appdate);
+                    bufread.close();
+                    
+                    if (type.equals("In")) {
+                        return new InPatient(id, name, age, blood, gender, birthDate, tel, disease, type, room, building, admit);
+                    } else {
+                        return new OutPatient(id, name, age, blood, gender, birthDate, tel, disease, type, appdate);
+                    }
                 }
             }
             bufread.close();
         } catch (Exception er ){
             er.printStackTrace();
         }
+        return null;
     }
+
+    public void checkBills(int patientId) {
+        try {
+            FileReader billread = new FileReader("txt/billData.txt");
+            BufferedReader bwread = new BufferedReader(billread);
+            String line = bwread.readLine();
+            double total = 0;
+            while (line != null) {
+                String[] part = line.split(",");
+                int ptid = Integer.parseInt(part[0]);
+                String des = part[1];
+                double price = Double.parseDouble(part[2]);
+
+                total += price;
+                if (ptid == patientId) {
+                    System.out.printf("%-8d %-15s %-10.2f\n", ptid, des,price);
+                }
+                line = bwread.readLine();
+            }
+            bwread.close();
+            System.out.println("Total Expenses: " + total);
+        } catch (Exception er) {
+            er.printStackTrace();
+        }
+    }
+    public void addBillPatient(int patientId, PatientBill bill) {
+        try {
+            FileWriter billwrite = new FileWriter("txt/billData.txt", true);
+            BufferedWriter bufbill = new BufferedWriter(billwrite);
+
+            String line = "";
+            line = patientId + "," + bill.getDescription() + "," + bill.getPrice();
+            bufbill.write(line);
+            bufbill.newLine();
+            bufbill.close();
+        } catch (Exception er) {
+            er.printStackTrace();
+        }
+    }
+    
 }

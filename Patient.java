@@ -90,4 +90,8 @@ public class Patient {
     public void addBill(PatientBill bill) {
         bills.add(bill);
     }
+    //Method get bill for see the bills 
+    public ArrayList<PatientBill> getbills() {
+        return bills;
+    }
 }

@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //Patient class is used as a data model to store patient information, 
 // while PatientSystem handles user input and FileManager handles file operations.
 
 public class PatientSystem {
+    ArrayList<PatientBill> ptbills = new ArrayList<>();
     Scanner input = new Scanner(System.in);
     //Call method from FileManager
     FileManager fileManager = new FileManager();
@@ -128,5 +130,24 @@ public class PatientSystem {
         System.out.print("Enter Patient ID (5-digits): ");
         int ptId = input.nextInt();
         fileManager.searchId(ptId);
+    }
+    public void checkBill() {
+        System.out.println("Enter Patient ID to Check bill");
+        int ptidbillcheck = input.nextInt();
+        System.out.println("*--------* Bill " + ptidbillcheck + " *--------*");
+        fileManager.searchId(ptidbillcheck);
+        fileManager.checkBills(ptidbillcheck);
+    }
+    public void addBillPatient() {
+        System.out.println("Enter Patient ID to add bill");
+        int ptidbill = input.nextInt();
+        input.nextLine();
+        System.out.println("Enter Details: ");
+        String desc = input.nextLine();
+        System.out.println("Enter Price: ");
+        double price = input.nextDouble();
+
+        PatientBill bb = new PatientBill(desc, price);
+        fileManager.addBillPatient(ptidbill, bb);
     }
 }

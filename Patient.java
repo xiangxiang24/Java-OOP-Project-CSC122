@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Patient {
     //Attributes
-    private String patientId;
+    private int patientId;
     private String name;
     private int age;
     private String blood;
@@ -16,7 +16,8 @@ public class Patient {
     private ArrayList<PatientBill> bills = new ArrayList<>();
 
     //Constructor
-    public Patient(String patientId, String name, int age, String blood, String gender, String birthDate, String tel, String disease, String type) {
+    public Patient(int patientId, String name, int age, String blood, String gender, String birthDate, 
+    String tel, String disease, String type) {
         this.patientId = patientId;
         this.name = name;
         this.age = age;
@@ -24,10 +25,12 @@ public class Patient {
         this.gender = gender;
         this.birthDate = birthDate;
         this.tel = tel;
+        this.disease = disease;
+        this.type = type;
     }
 
     //Getters and Setters
-    public String getPatientId () {
+    public int getPatientId () {
         return patientId;
     }
     public String getName() {
@@ -55,7 +58,7 @@ public class Patient {
         return type;
     }
 
-    public void setPatientId(String patientId) {
+    public void setPatientId(int patientId) {
         this.patientId = patientId;
     }
     public void setName(String name) {

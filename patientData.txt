@@ -1,0 +1,2 @@
+10230,Ammy Parson,24,AB,F,2000-12-03,0846578329,Diabetes,In,382,FB,4,-
+10231,Tomson Hanston,45,O,M,1975-06-03,9387284635,Fever,Out,0,-,0,2026-12-04

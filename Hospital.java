@@ -10,56 +10,70 @@ public class Hospital {
         String start = scan.nextLine();
         if (start.equalsIgnoreCase("begin")) {
             System.out.println("--Welcome to Hospital Managemant session--");
-            System.out.println("---------------- Main Page ---------------");
-            System.out.println("- (A) CHECK ALL PAITENT -");
-            System.out.println("- (B) ADD NEW PAITENT DATA -"); //Check bill after then
-            System.out.println("- (C) CHECK PAITENT BY ID -"); //Check bill after then
-            System.out.println("- (D) CHECK PAITENT DISEASE -");
-            System.out.println("- (E) CHECK PAITENT FROM BUILDING -");
-            System.out.println("- (F) CHECK PAITENT TYPE -");
-            System.out.println("- (G) ADD BILL BY ID -");
-            System.out.println("- (H) CHECK BILL BY ID -");
+            while (true) {
+                System.out.println("-------------------------- Main Page --------------------------");
+                System.out.println("- (A) CHECK ALL PAITENT -");
+                System.out.println("- (B) ADD NEW PAITENT DATA -"); //Check bill after then
+                System.out.println("- (C) CHECK PAITENT BY ID -"); //Check bill after then
+                System.out.println("- (D) CHECK PAITENT DISEASE -");
+                System.out.println("- (E) CHECK PAITENT FROM BUILDING -");
+                System.out.println("- (F) CHECK PAITENT TYPE -");
+                System.out.println("- (G) ADD BILL BY ID -");
+                System.out.println("- (H) CHECK BILL BY ID -");
+                System.out.println("If you need to Log out type ('lg')");
 
-            System.out.println();
-            System.out.print("Type : ");
-            String menu = scan.nextLine();
-            PatientSystem system = new PatientSystem();
-            switch (menu) {
-                case "A":
-                    System.out.printf("%-8s %-20s %-7s %-7s %-7s %-15s %-15s %-15s %-5s %-5s %-7s %-10s %-15s",
-                        "ID", "NAME", "AGE", "BLOOD", "GENDER", "BIRTHDATE", "CONTACT", "DISEASE", "TYPE", "ROOM", "BLOCK", "AM-DAYS", "APPOINTMENT"
-                    );
-                    System.out.println();
-                    system.displayAllPatients();
+                System.out.println();
+                System.out.print("Type : ");
+                String menu = scan.nextLine();
+                PatientSystem system = new PatientSystem();
+                
+                if (menu.equalsIgnoreCase("lg")) {
                     break;
-                case "B":
-                    system.addPatient();
+                }
+
+                switch (menu) {
+                    case "A":
+                        System.out.printf("%-8s %-20s %-7s %-7s %-7s %-15s %-15s %-15s %-5s %-5s %-7s %-10s %-15s",
+                            "ID", "NAME", "AGE", "BLOOD", "GENDER", "BIRTHDATE", "CONTACT", "DISEASE", "TYPE", "ROOM", "BLOCK", "AM-DAYS", "APPOINTMENT"
+                        );
+                        System.out.println();
+                        system.displayAllPatients();
+                        break;
+                    case "B":
+                        system.addPatient();
+                        break;
+                    case "C":
+                        system.searchById();
+                        break;
+                    case "D":
+                        system.displayPatientByDisease();
+                        break;
+                    case "E":
+                        system.displayPatientByBuilding();
+                        break;
+                    case "F":
+                        system.displayPatientByType();
+                        break;
+                    case "G":
+                        system.addBillPatient();
+                        break;
+                    case "H":
+                        system.checkBill();
+                        break;
+                    default:
+                        System.out.println("Please type follow the menu");
+                        continue;
+                }
+
+                System.out.println("---------------------------------------------------------------");
+                System.out.println("Type (M) Back to Main Page | (lg) Log out");
+                System.out.print("Enter your next target: ");
+                String breakinput = scan.nextLine();
+                if (breakinput.equalsIgnoreCase("lg")) {
                     break;
-                case "C":
-                    system.searchById();
-                    break;
-                case "D":
-                    system.displayPatientByDisease();
-                    break;
-                case "E":
-                    system.displayPatientByBuilding();
-                    break;
-                case "F":
-                    system.displayPatientByType();
-                    break;
-                case "G":
-                    System.out.print("Please Type Patient Id: ");
-                    system.addBillPatient();
-                    break;
-                case "H":
-                    System.out.print("Please Type Patient Id: ");
-                    system.checkBill();
-                    break;
-                default:
-                    break;
+                }
             }
         }
-        scan.close();
     }
 }
 

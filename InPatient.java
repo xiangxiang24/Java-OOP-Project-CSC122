@@ -31,4 +31,9 @@ public class InPatient extends Patient{
     public void setAdmitDays(int admit) {
         this.admitDays = admit;
     }
+
+    @Override
+    public double extraCharge() {
+        return 12000;
+    }
 }

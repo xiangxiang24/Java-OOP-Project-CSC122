@@ -57,7 +57,6 @@ public class PatientSystem {
                 int Idays = input.nextInt();
 
                 System.out.println("----------------** Thank you **----------------");
-                input.close();
 
                 InPatient ip = new InPatient(Iid, Iname, Iage, Iblood, Igender, IbirthDate, Itel, Idisease, Itype, Iroom, Ibuilding, Idays);
                 fileManager.writeData(ip);
@@ -98,7 +97,6 @@ public class PatientSystem {
                 String Oappdate = input.nextLine();
 
                 System.out.println("----------------** Thank you **----------------");
-                input.close();
 
                 OutPatient op = new OutPatient(Oid, Oname, Oage, Oblood, Ogender, ObirthDate, Otel, Odisease, Otype, Oappdate);
                 fileManager.writeData(op);
@@ -122,7 +120,7 @@ public class PatientSystem {
         fileManager.readDataFromDisease(dis);
     }
     public void displayPatientByType() {
-        System.out.print("Enter Type of Patient: ");
+        System.out.print("Enter Type of Patient(In/Out): ");
         String Type = input.nextLine();
         fileManager.readDataFromType(Type);
     }
@@ -134,6 +132,7 @@ public class PatientSystem {
     public void checkBill() {
         System.out.println("Enter Patient ID to Check bill");
         int ptidbillcheck = input.nextInt();
+        input.nextLine();
         System.out.println("*--------* Bill " + ptidbillcheck + " *--------*");
         fileManager.searchId(ptidbillcheck);
         fileManager.checkBills(ptidbillcheck);
@@ -146,6 +145,7 @@ public class PatientSystem {
         String desc = input.nextLine();
         System.out.println("Enter Price: ");
         double price = input.nextDouble();
+        System.out.println("----------------** Thank you **----------------");
 
         PatientBill bb = new PatientBill(desc, price);
         fileManager.addBillPatient(ptidbill, bb);

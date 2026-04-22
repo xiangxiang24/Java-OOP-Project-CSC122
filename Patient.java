@@ -94,4 +94,8 @@ public class Patient {
     public ArrayList<PatientBill> getbills() {
         return bills;
     }
+
+    public double extraCharge() {
+        return 0;
+    }
 }

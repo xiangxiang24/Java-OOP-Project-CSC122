@@ -1,3 +1,117 @@
 10230,Medicines,2500.0
 10230,Macroban,340.0
 10230,Vascaline,432.0
+10234,Loratadine,90.0
+10232,Salbutamol,300.0
+10232,Terbutaline,30.0
+10230,Insulin Injection,1200
+10230,Glucose Test Strip,450
+10230,Doctor Fee,800
+10230,Syringe Disposable,120
+10231,Paracetamol 500mg,50
+10231,Clinic Visit Fee,500
+10231,Vitamin C,200
+10232,Salbutamol Inhaler,350
+10232,Chest X-Ray,1200
+10232,Doctor Fee,800
+10232,Antihistamine,150
+10233,Cough Syrup,120
+10233,Paracetamol,50
+10233,Nursing Fee,300
+10233,Room Charge,2500
+10234,Antihistamine,180
+10234,Nasal Spray,320
+10234,Doctor Fee,800
+10234,Blood Test,1500
+10235,Sumatriptan,850
+10235,Painkiller,120
+10235,Doctor Fee,600
+10236,Oseltamivir,1200
+10236,Medical Mask,50
+10236,Room Charge,3000
+10236,Nursing Fee,500
+10237,Benzoyl Peroxide,450
+10237,Retin-A Cream,550
+10237,Doctor Fee,1000
+10238,Allopurinol,250
+10238,Colchicine,180
+10238,Lab Test Uric Acid,600
+10239,Omeprazole,400
+10239,Antacid Liquid,150
+10239,Room Charge,3500
+10239,Endoscopy,8500
+10239,Doctor Fee,1500
+10240,Iron Supplement,300
+10240,Folic Acid,150
+10240,Blood Count Test,800
+10241,Chemotherapy Session,45000
+10241,Anti-Nausea Meds,1200
+10241,Room Charge,5000
+10241,Cancer Marker Test,3500
+10242,Loratadine,120
+10242,Steroid Cream,250
+10242,Consultation Fee,500
+10243,Weight Consult,1200
+10243,Nutrition Plan,2500
+10243,Lab Panel,1800
+10244,Magnesium Carbonate,200
+10244,Doctor Fee,800
+10244,Room Charge,2800
+10245,Alprazolam,600
+10245,Therapy Session,2500
+10245,Service Fee,300
+10246,Inhaler Refill,350
+10246,Oxygen Therapy,1500
+10246,Nursing Fee,500
+10246,Room Charge,3200
+10247,Topiramate,900
+10247,Botox for Migraine,15000
+10247,Doctor Fee,1200
+10248,Chemo Meds,55000
+10248,IV Drip Set,800
+10248,Room Charge,6000
+10248,Specialist Fee,3000
+10249,Melatonin,450
+10249,Sleep Study,12000
+10249,Doctor Fee,1500
+10250,Diazepam,300
+10250,Counseling Fee,2000
+10250,Nursing Fee,500
+10250,Room Charge,3000
+10251,Glucosamine,1200
+10251,Ibuprofen,100
+10251,X-Ray Knee,1500
+10251,Doctor Fee,800
+10252,Donepezil,2500
+10252,Brain Scan MRI,18000
+10252,Home Care Kit,1500
+10253,Metformin,400
+10253,Insulin Pen,1800
+10253,Nursing Fee,600
+10253,Room Charge,3500
+10253,Glucose Lab,500
+10254,Paracetamol,50
+10254,Cooling Patch,120
+10254,Doctor Fee,500
+10255,ORS Packet,80
+10255,Antibiotics,450
+10255,IV Fluid Set,1200
+10255,Room Charge,2500
+10256,Sleep Medication,800
+10256,Psychiatric Consult,3000
+10256,Room Charge AB,4500
+10256,Nursing Fee,800
+10257,Sedative,1200
+10257,Behavioral Therapy,3500
+10257,Room Charge AB,4500
+10258,Iron Injection,2500
+10258,Blood Transfusion,5500
+10258,Room Charge AB,4500
+10258,Lab CBC,600
+10259,Bronchodilator,650
+10259,Nebulizer Service,1200
+10259,Room Charge AB,4500
+10260,Antacid Forte,300
+10260,Gastroscopy,9500
+10260,Room Charge AB,4500
+10260,Doctor Fee,1500

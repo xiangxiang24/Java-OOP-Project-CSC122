@@ -16,4 +16,8 @@ public class OutPatient extends Patient {
     public void setAppointment(String appoint) {
         this.appointmentDate = appoint;
     } 
+
+    public double extraCharge() {
+        return 1500;
+    }
 }

@@ -115,3 +115,4 @@
 10260,Gastroscopy,9500
 10260,Room Charge AB,4500
 10260,Doctor Fee,1500
+15637,Paracetamol,500.0

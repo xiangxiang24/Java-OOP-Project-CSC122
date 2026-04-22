@@ -73,6 +73,8 @@ public class Hospital {
                     break;
                 }
             }
+
+            scan.close();
         }
     }
 }

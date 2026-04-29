@@ -30,3 +30,4 @@
 10259,Ada Thorne,32,AB,F,1994-01-12,0845674567,Asthma,In,204,AB,3,-
 10260,Michael Gray,28,O,M,1998-09-03,0856785678,Gastritis,In,205,AB,2,-
 15637,auka,58,O,F,2008-04-25,0901112233,hiw khao mak mak,In,102,AA,354,-
+10267,godfilmmy,3,A,F,2020-06-07,0627614949,jungwonieAddiction,In,67,FB,100,-

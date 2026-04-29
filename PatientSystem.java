@@ -1,11 +1,9 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 //Patient class is used as a data model to store patient information, 
 // while PatientSystem handles user input and FileManager handles file operations.
 
 public class PatientSystem {
-    ArrayList<PatientBill> ptbills = new ArrayList<>();
     Scanner input = new Scanner(System.in);
     //Call method from FileManager
     FileManager fileManager = new FileManager();

@@ -24,7 +24,7 @@ public class Hospital {
 
                 System.out.println();
                 System.out.print("Type : ");
-                String menu = scan.nextLine();
+                String menu = scan.nextLine().toUpperCase();
                 PatientSystem system = new PatientSystem();
                 
                 if (menu.equalsIgnoreCase("lg")) {
